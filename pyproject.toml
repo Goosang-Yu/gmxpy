@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gmxpy"
-version = "0.1"
+version = "0.0.1"
 description = "Wrapping GROMACS by python for me"
 authors = ["Goosang Yu <gsyu93@gmail.com>"]
 readme = "README.md"
