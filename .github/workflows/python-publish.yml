@@ -1,5 +1,10 @@
 name: release
 
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   releaase:
     if: github.ref == 'refs/heads/main'
@@ -39,11 +44,11 @@ jobs:
 
 
       - name: Publish to TestPyPI
-        uses: Goosang-Yu/gmxpy@release/v0.0.1
+        uses: Goosang-Yu/gmxpy
         with:
-
           user: __token__
           password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          pyproject-folder: ./
           repository_url: https://test.pypi.org/legacy/
 
       - name: Test install from TestPyPI
@@ -54,7 +59,8 @@ jobs:
             <package_name>
 
       - name: Publish to PyPI
-        uses: Goosang-Yu/gmxpy@release/v0.0.1
+        uses: Goosang-Yu/gmxpy
         with:
           user: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}
+          pyproject-folder: ./
