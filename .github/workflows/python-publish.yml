@@ -44,7 +44,6 @@ jobs:
 
 
       - name: Publish to TestPyPI
-        uses: Goosang-Yu/gmxpy
         with:
           user: __token__
           password: ${{ secrets.TEST_PYPI_API_TOKEN }}
@@ -59,7 +58,6 @@ jobs:
             <package_name>
 
       - name: Publish to PyPI
-        uses: Goosang-Yu/gmxpy
         with:
           user: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}
