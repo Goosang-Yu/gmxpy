@@ -12,10 +12,9 @@ authors = [
     { name = "Goosang Yu", email = "gsyu93@gmail.com" },
 ]
 classifiers = [
-    "Intended Audience :: Molecular dynamics simulation",
-    "Intended Audience :: Bioinformatics",
+    "Intended Audience :: Science/Research",
     "Intended Audience :: Developers",
-    "Operating System :: Linux",
+    "Operating System :: Unix",
     "Topic :: Software Development :: Libraries :: Application Frameworks",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Software Development :: Libraries",
@@ -39,3 +38,12 @@ Repository = "https://github.com/Goosang-Yu/gmxpy"
 
 [tool.hatch.version]
 path = "gmxpy/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/.github",
+  "/docs",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["gmxpy"]
