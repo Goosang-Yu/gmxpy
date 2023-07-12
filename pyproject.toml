@@ -1,21 +1,41 @@
-[tool.poetry]
-name = "gmxpy"
-version = "0.0.1"
-description = "Wrapping GROMACS by python for me"
-authors = ["Goosang Yu <gsyu93@gmail.com>"]
-readme = "README.md"
-packages = [{include = "gmxpy"}]
-
-[tool.poetry.dependencies]
-python = "^3.8"
-
-[tool.poetry.dev-dependencies]
-pytest = "^5.2"
-
-[tool.semantic_release]
-version_variable = "pyproject.toml:version"
-version_source = "tag"
-
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling >= 1.13.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gmxpy"
+description = "Wrapping GROMACS by Python for me"
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"
+authors = [
+    { name = "Goosang Yu", email = "gsyu93@gmail.com" },
+]
+classifiers = [
+    "Intended Audience :: Molecular dynamics simulation",
+    "Intended Audience :: Bioinformatics",
+    "Intended Audience :: Developers",
+    "Operating System :: Linux",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development",
+    "Typing :: Typed",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/Goosang-Yu/gmxpy"
+Repository = "https://github.com/Goosang-Yu/gmxpy"
+
+[tool.hatch.version]
+path = "gmxpy/__init__.py"
