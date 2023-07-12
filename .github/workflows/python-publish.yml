@@ -6,7 +6,6 @@ on:
 
 jobs:
   releaase:
-    if: github.ref == 'refs/heads/main'
     strategy:
       matrix:
         python-version: [3.9]
