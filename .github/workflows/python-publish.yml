@@ -2,23 +2,17 @@ name: release
 
 on:
   release:
-    types:
-      - created
+    types: [ published ]
 
 jobs:
   releaase:
-    strategy:
-      matrix:
-        python-version: [3.9]
-        os: [ubuntu-latest]
-    
-    runs-on: ${{ matrix.os}}
+    runs-on: ubuntu-latest
 
     steps:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version}}
+          python-version: '3.9'
 
       - name: Check-out repository
         uses: actions/checkout@v3
