@@ -20,7 +20,7 @@ One of the functions included in gmxpy, called 'xvg2df', converts it into a much
 ```python
 import gmxpy as gmx
 
-df_xvg = xvg2df('interaction_energy.xvg')
+df_xvg = gmx.xvg2df('interaction_energy.xvg')
 df_xvg()
 ```
 |           | Coul-SR:Protein-JZ4 | LJ-SR:Protein-JZ4 |
