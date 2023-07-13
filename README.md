@@ -37,4 +37,4 @@ With just a little additional effort, it can be conveniently plotted and visuali
 ```python
 df_xvg().plot()
 ```
-![](docs/figures/rmsd_jz4.png)
+![](docs/figures/interaction_energy.png)
