@@ -12,6 +12,13 @@ Wrapping GROMACS by python script for me
 Since 2023. 07. 12.  
 Tested GROMCAS ver. 2023.1
 
+## Installation
+
+```python
+pip install gmxpy
+```
+*This package does not include GROMACS. You need to install GROMCAS separately. Also, gmxpy is currently being developed based on GROMACS version 2023.1. If you use a version that is too old, it may not be compatible.*
+
 ## You don need to use XMGRACE anymore!
 GROMACS by default generates graphs of data in the form of xmgrace files (.xvg). Xmgrace produces visually appealing plots, but it can be cumbersome to handle in different languages or operating systems. The most important thing is that I am not familiar with it.
 
