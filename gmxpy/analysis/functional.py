@@ -3,8 +3,7 @@ import pandas as pd
 
 def make_decomp_df(file:str, silence=True):
     '''GBSA decomposition results file 
-    gmx_MMPBSA에서 GB를 돌렸을 때 나오는 결과 파일을 보기 좋게 만드는 함수. 
-    분석을 위해 dataframe이 인식할 수 있는 csv 파일로 만들어서 저장 후, 객체로 return
+    분석을 위해 dataframe이 인식할 수 있는 csv 파일로 만드는 객체
 
     ## Data example ##
     | Run on Fri Oct 27 19:17:14 2023\n
@@ -22,7 +21,7 @@ def make_decomp_df(file:str, silence=True):
     '''
 
     try: 
-        f = open(f"{file}_summary.csv", 'wx', encoding='utf-8')
+        f = open(f"{file}_summary.csv", 'x', encoding='utf-8')
         
         header_1 = []
         header_2 = []
@@ -42,7 +41,6 @@ def make_decomp_df(file:str, silence=True):
                     if len(h2) == 0: columns.append(_h1)
                     else           : columns.append(f'{_h1}_{h2}')
                         
-                print(columns)
                 columns = ','.join(columns)
                 f.write(columns)
             
