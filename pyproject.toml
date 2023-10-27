@@ -11,6 +11,12 @@ license = "MIT"
 authors = [
     { name = "Goosang Yu", email = "gsyu93@gmail.com" },
 ]
+keywords = [
+  "gromacs",
+  "simulation",
+  "molecular dynamics",
+  "analysis",
+]
 classifiers = [
     "Intended Audience :: Science/Research",
     "Intended Audience :: Developers",
@@ -39,6 +45,8 @@ dynamic = ["version"]
 [project.urls]
 Homepage = "https://github.com/Goosang-Yu/gmxpy"
 Repository = "https://github.com/Goosang-Yu/gmxpy"
+Source = "https://github.com/Goosang-Yu/gmxpy"
+Tracker = "https://github.com/Goosang-Yu/gmxpy/issues"
 
 [tool.hatch.version]
 path = "gmxpy/__init__.py"
